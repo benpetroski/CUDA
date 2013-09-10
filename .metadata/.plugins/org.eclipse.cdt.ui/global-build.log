@@ -1,0 +1,40 @@
+12:14:21 **** Clean-only build of configuration Debug for project helloParallelism ****
+make clean 
+rm -rf  ./src/helloParallelism.d  ./src/helloParallelism.o  helloParallelism
+ 
+12:14:21 **** Build of configuration Debug for project helloParallelism ****
+make all 
+Building file: ../src/helloParallelism.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-5.5/bin/nvcc -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=sm_21 -odir "src" -M -o "src/helloParallelism.d" "../src/helloParallelism.cu"
+/usr/local/cuda-5.5/bin/nvcc --compile -G -O0 -g -gencode arch=compute_20,code=compute_20 -gencode arch=compute_20,code=sm_21  -x cu -o  "src/helloParallelism.o" "../src/helloParallelism.cu"
+Finished building: ../src/helloParallelism.cu
+ 
+Building target: helloParallelism
+Invoking: NVCC Linker
+/usr/local/cuda-5.5/bin/nvcc --cudart static -link -o  "helloParallelism"  ./src/helloParallelism.o   
+Finished building target: helloParallelism
+ 
+12:14:26 **** Incremental Build of configuration Debug for project helloParallelism ****
+make all 
+make: Nothing to be done for `all'.
+12:14:35 **** Clean-only build of configuration Debug for project helloWorld ****
+make clean 
+rm -rf  ./src/helloWorld.d  ./src/helloWorld.o  helloWorld
+ 
+12:14:35 **** Build of configuration Debug for project helloWorld ****
+make all 
+Building file: ../src/helloWorld.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-5.5/bin/nvcc -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=sm_21 -odir "src" -M -o "src/helloWorld.d" "../src/helloWorld.cu"
+/usr/local/cuda-5.5/bin/nvcc --compile -G -O0 -g -gencode arch=compute_20,code=compute_20 -gencode arch=compute_20,code=sm_21  -x cu -o  "src/helloWorld.o" "../src/helloWorld.cu"
+Finished building: ../src/helloWorld.cu
+ 
+Building target: helloWorld
+Invoking: NVCC Linker
+/usr/local/cuda-5.5/bin/nvcc --cudart static -link -o  "helloWorld"  ./src/helloWorld.o   
+Finished building target: helloWorld
+ 
+12:14:40 **** Incremental Build of configuration Debug for project helloWorld ****
+make all 
+make: Nothing to be done for `all'.
